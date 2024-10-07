@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="./js/elements/line.js"></script>
+  <script src="./js/elements/arcline.js"></script>
+  <script src="./js/elements/point.js"></script>
+  <script src="./js/elements/circle.js"></script>
+  <script src="./js/draw/draw.js"></script>
+  <script src="./js/draw/utils.js"></script>
+  <script src="./js/main.js"></script>
+  <title>Graphs</title>
+</head>
+
+<body>
+
+
+  <div class="main-screen" id="main-screen">
+    <div class="draw-div">
+      <canvas id="draw-board" class="draw=board"></canvas>
+    </div>
+    <div class="elements">
+      <h3 class="label-mode-0">Harary-Hill</h3>
+      <div class="complete-inputs-0">
+        <p title="Graph dimension">n: <input id="hh-graph-dimension" placeholder="Dimension" type="number" min="0"
+            value="13"> </p>
+        <button class="draw-button draw-harary-hill-graph">Generate</button>
+      </div>
+      <h3 class="label-mode-1">Blažek-Koman</h3>
+      <div class="complete-inputs-1">
+        <p title="Graph dimension">n: <input id="bk-graph-dimension" placeholder="Dimension" type="number" min="0"
+            value="9"></p>
+        <button class="draw-button draw-blazek-koman-graph">Generate</button>
+      </div>
+      <h3 class="label-mode-2">Bipartite Graph</h3>
+      <div class="bipartite-inputs">
+        <p title="Dimension of first partition">n1: <input id="dimensionH" placeholder="Dimension" type="number" min="0"
+            value="7"></p>
+        <p title="Dimension of second partition">n2: <input id="dimensionV" placeholder="Dimension" type="number"
+            min="0" value="4"></p>
+        <button class="draw-button draw-bipartite-graph">Generate</button>
+      </div>
+      <p></p>
+      <div class="sliders">
+        <div class="zoomSlider">
+          Zoom:
+          <input type="range" min="25" max="200" value="50" class="slider" id="zoomRange">
+        </div>
+        <p></p>
+        <div class="twistSlider">
+          Rotation:
+          <input type="range" min="0" max="10" value="3" class="slider" id="twistRange">
+        </div>
+      </div>
+      <div class="toggle">
+        <p>Show Intersections: <input id="draw-intersections" type="checkbox" checked></p>
+      </div>
+      <div>
+        <p class="inters">
+          <span id="output-span">0</span> intersections;
+          <span id="selected-span">0</span> highlighted intersections
+        </p>
+        <div class="conj-div">
+          <p class="formule-div" id="formule-div">
+            Optimal number of intersection according to Harary-Hill conjecture:</p>
+          <span class="formule-span" id="formule-span">0</span>
+        </div>
+      </div>
+      <p>CTRL-click points to select them</p>
+    </div>
+  </div>
+</body>
+
+</html>
