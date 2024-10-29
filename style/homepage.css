@@ -18,13 +18,18 @@ header {
     color: #fff;
 }
 
+header a {
+    color: #fff;
+    
+}
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 1.5rem;
 }
 
@@ -37,6 +42,9 @@ p {
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
     background-color: #fff;
     padding: 1.5rem;
     width: 300px;
@@ -56,7 +64,14 @@ p {
     margin-bottom: 1rem;
 }
 
+
+
+.project-button::before {
+    content: 'View Project';
+}
+
 .project-button {
+    content: 'View Project';
     display: inline-block;
     padding: 0.5rem 1rem;
     font-size: 0.9rem;

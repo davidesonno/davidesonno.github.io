@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,54 @@
     <link rel="stylesheet" href="style/homepage.css">
     <script src="scripts/main.js"></script>
 </head>
+
 <body>
     <header>
-        <h1>Davide Sonno Github Projects</h1>
-        <p>This is a selection of some projects hosted on github. If the projects provide an html page, it will be loaded. Otherwise the repository page will be opened.</p>
+        <h1><a href="https://github.com/davidesonno" target="_blank">Davide Sonno GitHub</a> Projects</h1>
+        <p>This is a selection of some projects hosted on github. If the projects provide an html page, it will be
+            loaded. Otherwise the repository page will be opened.</p>
     </header>
 
     <section class="project-gallery">
         <div class="project-card">
             <h2>Bachelor Thesis</h2>
             <p>Project of the thesis work for the Bachelor Degree in Computer Engineering.</p>
-            <button onclick="loadHTML('projects/thesis/index.html')" class="project-button">View Project</button>
-        </div>
-        <!-- <div class="project-card">
-            <h2>Project 2</h2>
-            <p>A brief description of Project 2, highlighting key features and technologies used.</p>
-            <button href="#" class="project-button">Learn More</button>
+            <button onclick="loadHTML('projects/thesis/index.html')" class="project-button"></button>
         </div>
         <div class="project-card">
-            <h2>Project 3</h2>
-            <p>A brief description of Project 3, highlighting key features and technologies used.</p>
-            <button href="#" class="project-button">Learn More</button>
-        </div> -->
+            <h2>Satellite Segmentation</h2>
+            <p>Project for the Depp Learning exam about satellite segmentation.</p>
+            <button
+                onclick="loadJupyter('https://github.com/davidesonno/DeepLearningExamProject/blob/main/Sonno_Davide_Satellite_Segmentation.ipynb');"
+                class="project-button"></button>
+        </div>
+        <div class="project-card">
+            <span>
+                <h2>Product Recognition with feature detection</h2>
+                <p>We implemented product classification using SIFT features to then create a quantized star model to
+                    have a scale and rotaition invariant recognition.</p>
+            </span>
+            <button
+                onclick="loadJupyter('https://github.com/davidesonno/IPCV-assignments/blob/main/part_one/assigment1.ipynb')"
+                class="project-button"></button>
+        </div>
+        <div class="project-card">
+            <h2>Grocery Store Products recognition using CNN</h2>
+            <p>Analysis of the improvements to a basic neural network to improve its accuracy over a dataset of grocery
+                store products.</p>
+            <button
+                onclick="loadJupyter('https://github.com/davidesonno/IPCV-assignments/blob/main/part_two/assignment2.ipynb')"
+                class="project-button"></button>
+        </div>
+        <div class="project-card">
+            <h2>Approximate Inference for Bayesian Networks</h2>
+            <p>The method for computing approximate inference is an instance of Markov Chain Monte Carlo algorithms, a
+                simulation approach that, using the convergence property of the Markov Chains, computes the desired
+                probability.</p>
+            <button
+                onclick="loadJupyter('https://github.com/davidesonno/Gibbs-Sampling/blob/main/Documentation/Gibbs%20Sampling%20for%20Bayesian%20Networks.ipynb')"
+                class="project-button"></button>
+        </div>
     </section>
 </body>
 

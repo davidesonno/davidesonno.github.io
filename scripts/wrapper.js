@@ -1,23 +1,31 @@
-function loadContent() {
+function loadPageContent() {
     const urlParams = new URLSearchParams(window.location.search);
-    const project = urlParams.get('project');
-    const notebook = urlParams.get('notebook');
+    const html = urlParams.get('html');
+    const jupyter = urlParams.get('jupyter');
     const projectContent = document.getElementById('content');
 
-    if (project) {
+    if (html) {
         const iframe = document.createElement('iframe');
         iframe.classList.add('rendered-iframe')
-        iframe.src = project;
+        iframe.src = html;
         projectContent.appendChild(iframe);
-    } else if (notebook) {
-        const notebookUrl = `https://mybinder.org/v2/gh/user/repo/branch?urlpath=notebooks/${notebook}`;
+    } else if (jupyter) {
         const iframe = document.createElement('iframe');
         iframe.classList.add('rendered-iframe')
-        iframe.src = notebookUrl;
+        iframe.src = jupyter;
         projectContent.appendChild(iframe);
     } else {
         projectContent.innerHTML = '<p>No project or notebook selected.</p>';
     }
 }
 
-window.onload = loadContent;
+function addRepoHref(){
+
+}
+
+function initPage(){
+    addRepoHref();
+    loadPageContent();
+}
+
+window.onload = initPage;

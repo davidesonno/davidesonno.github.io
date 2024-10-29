@@ -9,5 +9,22 @@
 // });
 
 function loadHTML(indexLink) {
-    window.location.href = 'wrapper.html?project=' + indexLink;
+    loadFile(indexLink, 'html');
+}
+
+function loadJupyter(notebookLink) {
+    const regex = /github\.com\/([^\/]+)\/([^\/]+)\/(?:blob\/([^\/]+)\/)?([^?#]+)/;
+    const match = notebookLink.match(regex);
+    if (match) {
+        const username = match[1];
+        const repository = match[2];
+        const branch = match[3];
+        const file = match[4];
+        const notebookHost = 'https://nbviewer.org/github/' + username + '/' + repository + '/blob/' + branch + '/' + file;
+        loadFile(notebookHost, 'jupyter');
+    }
+}
+
+function loadFile(file, filetype) {
+    window.location.href = 'wrapper.html?' + filetype + '=' + file;
 }
