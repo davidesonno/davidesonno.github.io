@@ -28,3 +28,7 @@ function loadJupyter(notebookLink) {
 function loadFile(file, filetype) {
     window.location.href = 'wrapper.html?' + filetype + '=' + file;
 }
+
+function openLink(link, newPage=true){
+    window.open(link,'_blank')
+}

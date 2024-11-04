@@ -1,4 +1,4 @@
-function loadPageContent() {
+function renderIFrame() {
     const urlParams = new URLSearchParams(window.location.search);
     const html = urlParams.get('html');
     const jupyter = urlParams.get('jupyter');
@@ -20,12 +20,12 @@ function loadPageContent() {
 }
 
 function addRepoHref(){
-
+// add on the header the link to the repo on github
 }
 
 function initPage(){
     addRepoHref();
-    loadPageContent();
+    renderIFrame();
 }
 
 window.onload = initPage;

@@ -13,19 +13,20 @@
 <body>
     <header>
         <h1><a href="https://github.com/davidesonno" target="_blank">Davide Sonno GitHub</a> Projects</h1>
-        <p>This is a selection of some projects hosted on github. If the projects provide an html page, it will be
-            loaded. Otherwise the repository page will be opened.</p>
+        <p>This is a selection of some projects hosted on github. Some projects are notebooks or HTML pages and can be
+            visualized. for other kinds of projects the repository page will be opened.</p>
     </header>
 
     <section class="project-gallery">
         <div class="project-card">
-            <h2>Bachelor Thesis</h2>
-            <p>Project of the thesis work for the Bachelor Degree in Computer Engineering.</p>
+            <h2>Complete Graph drawing with reduced amount of crossings</h2>
+            <p>Thesis work for the Bachelor Degree in Computer Engineering.</p>
             <button onclick="loadHTML('projects/thesis/index.html')" class="project-button"></button>
         </div>
         <div class="project-card">
             <h2>Satellite Segmentation</h2>
-            <p>Project for the Depp Learning exam about satellite segmentation.</p>
+            <p>Developing an augmentation method to handle satellite images and build a neural network, in particular an
+                UNet, to achieve segmentation.</p>
             <button
                 onclick="loadJupyter('https://github.com/davidesonno/DeepLearningExamProject/blob/main/Sonno_Davide_Satellite_Segmentation.ipynb');"
                 class="project-button"></button>
@@ -55,6 +56,14 @@
                 probability.</p>
             <button
                 onclick="loadJupyter('https://github.com/davidesonno/Gibbs-Sampling/blob/main/Documentation/Gibbs%20Sampling%20for%20Bayesian%20Networks.ipynb')"
+                class="project-button"></button>
+        </div>
+        <div class="project-card">
+            <h2>Multiple Courier Planning Problem</h2>
+            <p>Model and solve the Multiple Courier Planning Problem, a Capacitated Vehicle Routing Problem (CVRP)
+                variation, using different methodologies: Constraint Programming,
+                Propositional Satisfiability, Satisfiability Modulo Theories, Mixed-Integer Linear Programming.</p>
+            <button onclick="openLink('https://github.com/davidecrociati/CDMO-project#readme')"
                 class="project-button"></button>
         </div>
     </section>
